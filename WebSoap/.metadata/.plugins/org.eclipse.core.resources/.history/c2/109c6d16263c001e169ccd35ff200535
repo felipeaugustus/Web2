@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Pedido {
+    private int numeroPedido;
+    private Date dataHoraPedido;
+    private String status;
+    private List<Produto> itens;
+
+    // Construtor
+    public Pedido(int numeroPedido, Date dataHoraPedido, String status) {
+        this.numeroPedido = numeroPedido;
+        this.dataHoraPedido = dataHoraPedido;
+        this.status = status;
+        this.itens = new ArrayList<>();
+    }
+
+    // Getters e Setters
+    public int getNumeroPedido() {
+        return numeroPedido;
+    }
+
+    public Date getDataHoraPedido() {
+        return dataHoraPedido;
+    }
+
+    public void setDataHoraPedido(Date dataHoraPedido) {
+        this.dataHoraPedido = dataHoraPedido;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public List<Produto> getItens() {
+        return itens;
+    }
+
+    public void adicionarItem(ItemDoMenu item) {
+        itens.add(item);
+    }
+
+    public void removerItem(ItemDoMenu item) {
+        itens.remove(item);
+    }
+}

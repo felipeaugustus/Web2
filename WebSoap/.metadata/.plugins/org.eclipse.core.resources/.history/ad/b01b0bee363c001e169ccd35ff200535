@@ -1,0 +1,21 @@
+package restaurante;
+
+import javax.jws.WebService;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+
+@WebService
+@SOAPBinding(style = Style.RPC)
+public interface PedidoServer {
+	
+  @WebMethod void AdicionarPedido();
+  @WebMethod Pedido BuscarPedido();
+  @WebMethod List<Pedido> ListarPedidos();
+  @WebMethod void AtualizarPedido();
+  @WebMethod void RemoverPedido();
+  
+}

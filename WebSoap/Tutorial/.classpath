@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/javax.jws-3.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/FastInfoset.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/gmbal-api-only.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/ha-api.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/istack-commons-runtime.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/javax.activation.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/javax.activation-api.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/javax.annotation-api.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/javax.xml.soap-api.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/jaxb-jxc.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/jaxb-runtime.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/jaxws-api.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/jaxws-rt.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/jaxws-tools.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/management-api.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/mimepull.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/policy.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/saaj-impl.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/stax2-api.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/stax-ex.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/streambuffer.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/txw2.jar"/>
+	<classpathentry kind="lib" path="D:/Documentos/Furb/jaxws-ri/lib/woodstox-core.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

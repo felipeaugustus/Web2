@@ -1,0 +1,45 @@
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import package restaurante;
+public class Pedido {
+    private int numeroPedido;
+    private LocalDateTime dataHoraPedido;
+    private String status;
+    private List<Produto> itens;
+    public Pedido(int numeroPedido, LocalDateTime dataHoraPedido, String status) {
+        this.numeroPedido = numeroPedido;
+        this.dataHoraPedido = dataHoraPedido;
+        this.status = status;
+        this.itens = new ArrayList<>();
+    }
+    public int getNumeroPedido() {
+        return numeroPedido;
+    }
+    public void setNumeroPedido(int numeroPedido) {
+        if (numeroPedido >= 0) {
+            this.numeroPedido = numeroPedido;
+        } else {
+            throw new IllegalArgumentException("Número do Pedido Inválido");
+        }
+    }
+    public LocalDateTime getDataHoraPedido() {
+        return dataHoraPedido;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        if (status != null && !status.isEmpty()) {
+            this.status = status;
+        } else {
+            throw new IllegalArgumentException("Status inválido");
+        }
+    }
+    public List<Produto> getItens() {
+        return itens;
+    }
+    public void setItens(List<Produto> itens) {
+        this.itens = itens;
+    }
+}
