@@ -1,6 +1,7 @@
 package com.restaurante;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import javax.jws.WebService;
 
@@ -30,11 +31,26 @@ public class ProdutoServerImpl implements ProdutoServer {
 	}
 
 	@Override
+	public String ListarProdutoString() {
+		String formatado = "";
+		for (Map.Entry<Integer, Produto> entry : produto.entrySet()) {
+			Integer key = entry.getKey();
+			String nome = entry.getValue().getNome();
+			String descricao = entry.getValue().getDescricao();
+			int preco = entry.getValue().getPreco();
+			String categoria = entry.getValue().getCategoria();
+			formatado += ("id produto: " + key + ", Nome: " + nome + ", descricao: " + descricao + ", Preco: " + preco
+					+ ", Categoria: " + categoria + "\n");
+		}
+		System.out.println(formatado);
+		return formatado;
+	}
+
+	@Override
 	public void AtualizarProduto(int id, String nome, String descricao, int preco, String categoria) {
 		produto.remove(id);
 		Produto p = new Produto(id, nome, descricao, preco, categoria);
 		produto.put(id, p);
-
 	}
 
 	@Override

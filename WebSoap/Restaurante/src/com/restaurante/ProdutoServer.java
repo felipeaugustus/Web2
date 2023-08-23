@@ -25,4 +25,6 @@ public interface ProdutoServer {
 	@WebMethod
 	void RemoverProduto(int id);
 
+	@WebMethod
+	public String ListarProdutoString();
 }

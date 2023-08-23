@@ -52,8 +52,8 @@ public class Pedido {
 	public String getItensString() {
 		String formatada = "";
 		for (int i = 0; i < produtos.size(); i++) {
-			formatada += ("Id: " + produtos.get(i).getId() + "\n");
-			formatada += ("Nome: " + produtos.get(i).getNome() + "\n");
+			formatada += ("Id: " + produtos.get(i).getId() + " ");
+			formatada += ("Nome: " + produtos.get(i).getNome() + " ");
 		}
 		return formatada;
 	}

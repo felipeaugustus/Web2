@@ -14,12 +14,12 @@ public class PedidoServerImpl implements PedidoServer {
 
 	@Override
 	public void AdicionarPedido(int numeroPedido, String dataHoraPedidoStr, String status) {
-	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
-	    LocalDateTime dataHoraPedido = LocalDateTime.parse(dataHoraPedidoStr, formatter);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+		LocalDateTime dataHoraPedido = LocalDateTime.parse(dataHoraPedidoStr, formatter);
 
-	    Pedido pedido = new Pedido(numeroPedido, dataHoraPedido, status);
-	    pedidos.put(numeroPedido, pedido);
-	    System.out.println("Exito");
+		Pedido pedido = new Pedido(numeroPedido, dataHoraPedido, status);
+		pedidos.put(numeroPedido, pedido);
+		System.out.println("Exito");
 	}
 
 	@Override
@@ -30,12 +30,12 @@ public class PedidoServerImpl implements PedidoServer {
 			return null;
 		}
 	}
-	
+
 	@Override
 	public HashMap<Integer, Pedido> getPedidos() {
 		return pedidos;
 	}
-	
+
 	@Override
 	public String ListarPedidos() {
 		String formatado = "";
@@ -43,7 +43,9 @@ public class PedidoServerImpl implements PedidoServer {
 			Integer key = entry.getKey();
 			String status = entry.getValue().getStatus();
 			String data = entry.getValue().getDataHoraPedido().toString();
-			formatado += ("Numero pedido: " + key + ", Status: " + status + ", Data: " + data + "\n");
+			String produtos = entry.getValue().getItensString();
+			formatado += ("Numero pedido: " + key + ", Status: " + status + ", Data: " + data + ", Produtos: "
+					+ produtos + "\n");
 		}
 		System.out.println(formatado);
 		return formatado;
@@ -76,11 +78,5 @@ public class PedidoServerImpl implements PedidoServer {
 		pedidos.get(idPedido).removerProduto(idProduto);
 		System.out.println("Produto removido do pedido");
 	}
-
-
-
-
-
-
 
 }
