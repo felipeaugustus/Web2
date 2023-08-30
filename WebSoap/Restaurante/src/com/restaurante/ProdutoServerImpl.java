@@ -11,13 +11,13 @@ public class ProdutoServerImpl implements ProdutoServer {
 	private HashMap<Integer, Produto> produto = new HashMap<>();
 
 	@Override
-	public void AdicionarProduto(int id, String nome, String descricao, int preco, String categoria) {
+	public void adicionarProduto(int id, String nome, String descricao, int preco, String categoria) {
 		Produto pro = new Produto(id, nome, descricao, preco, categoria);
 		produto.put(id, pro);
 	}
 
 	@Override
-	public Produto BuscarProduto(int id) {
+	public Produto buscarProduto(int id) {
 		try {
 			return produto.get(id);
 		} catch (Exception e) {
@@ -26,12 +26,12 @@ public class ProdutoServerImpl implements ProdutoServer {
 	}
 
 	@Override
-	public HashMap<Integer, Produto> ListarProduto() {
+	public HashMap<Integer, Produto> listarProduto() {
 		return this.produto;
 	}
 
 	@Override
-	public String ListarProdutoString() {
+	public String listarProdutoString() {
 		String formatado = "";
 		for (Map.Entry<Integer, Produto> entry : produto.entrySet()) {
 			Integer key = entry.getKey();
@@ -47,14 +47,14 @@ public class ProdutoServerImpl implements ProdutoServer {
 	}
 
 	@Override
-	public void AtualizarProduto(int id, String nome, String descricao, int preco, String categoria) {
+	public void atualizarProduto(int id, String nome, String descricao, int preco, String categoria) {
 		produto.remove(id);
 		Produto p = new Produto(id, nome, descricao, preco, categoria);
 		produto.put(id, p);
 	}
 
 	@Override
-	public void RemoverProduto(int id) {
+	public void removerProduto(int id) {
 		try {
 			produto.remove(id);
 		} catch (Exception e) {

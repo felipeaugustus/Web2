@@ -11,20 +11,20 @@ import javax.jws.soap.SOAPBinding.Style;
 @SOAPBinding(style = Style.RPC)
 public interface ProdutoServer {
 	@WebMethod
-	void AdicionarProduto(int id, String nome, String descricao, int preco, String categoria);
+	void adicionarProduto(int id, String nome, String descricao, int preco, String categoria);
 
 	@WebMethod
-	Produto BuscarProduto(int id);
+	Produto buscarProduto(int id);
 
 	@WebMethod
-	HashMap<Integer, Produto> ListarProduto();
+	HashMap<Integer, Produto> listarProduto();
 
 	@WebMethod
-	void AtualizarProduto(int id, String nome, String descricao, int preco, String categoria);
+	void atualizarProduto(int id, String nome, String descricao, int preco, String categoria);
 
 	@WebMethod
-	void RemoverProduto(int id);
+	void removerProduto(int id);
 
 	@WebMethod
-	public String ListarProdutoString();
+	public String listarProdutoString();
 }

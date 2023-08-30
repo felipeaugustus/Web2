@@ -13,19 +13,19 @@ import javax.jws.soap.SOAPBinding.Style;
 public interface PedidoServer {
 
 	@WebMethod
-	void AdicionarPedido(int numeroPedido, String dataHoraPedido, String status);
+	void adicionarPedido(int numeroPedido, String dataHoraPedido, String status);
 
 	@WebMethod
-	Pedido BuscarPedido(int numeroPedido);
+	Pedido buscarPedido(int numeroPedido);
 
 	@WebMethod
-	String ListarPedidos();
+	String listarPedidos();
 
 	@WebMethod
-	void AtualizarPedido(int numeroPedido, LocalDateTime novoDataHoraPedido, String novoStatus);
+	void atualizarPedido(int numeroPedido, LocalDateTime novoDataHoraPedido, String novoStatus);
 
 	@WebMethod
-	void RemoverPedido(int numeroPedido);
+	void removerPedido(int numeroPedido);
 
 	@WebMethod
 	public HashMap<Integer, Pedido> getPedidos();

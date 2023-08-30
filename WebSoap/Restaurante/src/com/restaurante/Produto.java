@@ -28,7 +28,11 @@ public class Produto {
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		if (nome.length() > 0) {
+			this.nome = nome;
+		} else {
+			throw new IllegalArgumentException("Nome invalido");
+		}
 	}
 
 	public String getDescricao() {
@@ -36,7 +40,11 @@ public class Produto {
 	}
 
 	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+		if (descricao.length() > 0) {
+			this.descricao = descricao;
+		} else {
+			throw new IllegalArgumentException("Descricao invalido");
+		}
 	}
 
 	public int getPreco() {
@@ -44,7 +52,11 @@ public class Produto {
 	}
 
 	public void setPreco(int preco) {
-		this.preco = preco;
+		if (preco > 0) {
+			this.preco = preco;
+		} else {
+			throw new IllegalArgumentException("Preco invalido");
+		}
 	}
 
 	public String getCategoria() {
@@ -52,6 +64,10 @@ public class Produto {
 	}
 
 	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+		if (categoria.length() > 0) {
+			this.categoria = categoria;
+		} else {
+			throw new IllegalArgumentException("Categoria invalida");
+		}
 	}
 }

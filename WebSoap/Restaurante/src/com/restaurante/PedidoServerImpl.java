@@ -13,7 +13,7 @@ public class PedidoServerImpl implements PedidoServer {
 	private HashMap<Integer, Pedido> pedidos = new HashMap<>();
 
 	@Override
-	public void AdicionarPedido(int numeroPedido, String dataHoraPedidoStr, String status) {
+	public void adicionarPedido(int numeroPedido, String dataHoraPedidoStr, String status) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
 		LocalDateTime dataHoraPedido = LocalDateTime.parse(dataHoraPedidoStr, formatter);
 
@@ -23,7 +23,7 @@ public class PedidoServerImpl implements PedidoServer {
 	}
 
 	@Override
-	public Pedido BuscarPedido(int numeroPedido) {
+	public Pedido buscarPedido(int numeroPedido) {
 		try {
 			return pedidos.get(numeroPedido);
 		} catch (Exception e) {
@@ -37,7 +37,7 @@ public class PedidoServerImpl implements PedidoServer {
 	}
 
 	@Override
-	public String ListarPedidos() {
+	public String listarPedidos() {
 		String formatado = "";
 		for (Map.Entry<Integer, Pedido> entry : pedidos.entrySet()) {
 			Integer key = entry.getKey();
@@ -52,14 +52,14 @@ public class PedidoServerImpl implements PedidoServer {
 	}
 
 	@Override
-	public void AtualizarPedido(int numeroPedido, LocalDateTime novoDataHoraPedido, String novoStatus) {
+	public void atualizarPedido(int numeroPedido, LocalDateTime novoDataHoraPedido, String novoStatus) {
 		pedidos.remove(numeroPedido);
 		Pedido novoPedido = new Pedido(numeroPedido, novoDataHoraPedido, novoStatus);
 		pedidos.put(numeroPedido, novoPedido);
 	}
 
 	@Override
-	public void RemoverPedido(int numeroPedido) {
+	public void removerPedido(int numeroPedido) {
 		try {
 			pedidos.remove(numeroPedido);
 		} catch (Exception e) {
